@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Inter, Poppins } from "next/font/google";
+import "./../styles/globals.css";
+import Nav from "@/components/nav";
+import TabNavigation from "@/components/tabNavigation";
+import SideBar from "@/components/sideBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +32,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.className} ${inter.variable} ${poppins.variable} antialiased max-md:select-none scroll-smooth`}
       >
-        {children}
+        <div className="md:hidden">
+          <Nav />
+          {children}
+          <TabNavigation />
+        </div>
+        <div className="max-md:hidden flex h-screen">
+          <SideBar />
+          <div className="p-8 overflow-auto h-full w-full flex justify-center items-start">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
