@@ -1,6 +1,6 @@
 "use client";
 
-import { FolderPlus, ImageUp, Plus, Repeat, SquareMousePointer, Star } from "lucide-react";
+import { FolderPlus, ImageUp, Repeat, SquareMousePointer, Star } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import Button from "./button";
