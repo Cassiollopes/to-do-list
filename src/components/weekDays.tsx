@@ -122,8 +122,8 @@ export default function WeekDays() {
             </div>
             <div className="text-center text-sm rounded-t-none p-10 h-full flex items-center justify-center group bg-[rgba(127,127,127,0.1)] rounded-b-2xl">
               <div className="flex flex-col items-center justify-center transition-all duration-200 ease-in opacity-50 group-hover:opacity-100">
-                <Plus size={24} />
-                <span className="leading-4">Adicionar Tarefa</span>
+                <Plus size={22} />
+                <span className="leading-4">adicionar Tarefa</span>
               </div>
             </div>
           </div>
