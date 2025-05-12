@@ -1,7 +1,7 @@
 "use client";
 
-import Logo from "./logo";
-import Avatar from "./avatar";
+import Logo from "../logo";
+import Avatar from "../avatar";
 
 export default function Nav() {  
   return (

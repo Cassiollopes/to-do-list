@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Inter, Poppins } from "next/font/google";
 import "./../styles/globals.css";
 import Nav from "@/components/nav";
-import TabNavigation from "@/components/tabNavigation";
-import SideBar from "@/components/sideBar";
+import TabNavigation from "@/components/nav/tabNavigation";
+import SideBar from "@/components/nav/sideBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +43,7 @@ export default function RootLayout({
         </div>
         <div className="max-md:hidden flex h-screen">
           <SideBar />
-          <div className="p-8 overflow-auto h-full w-full flex justify-center items-start">
+          <div className="overflow-auto h-full w-full flex justify-center items-start">
             {children}
           </div>
         </div>

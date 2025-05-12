@@ -5,16 +5,15 @@ import Title from "@/components/title";
 import WeekDays from "@/components/weekDays";
 import {
   CalendarRange,
-  CornerDownLeft,
   GalleryVerticalEnd,
   ListTodo,
 } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col overflow-hidden max-md:pb-28 md:justify-center max-w-[900px] gap-8 max-md:mt-1">
+    <div className="flex flex-col overflow-hidden max-md:pb-28 md:justify-center max-w-[900px] gap-8 max-md:mt-1 md:p-8 max-md:gap-10">
       <div className="max-md:hidden py-4">
-        <Logo />
+      <Logo />
       </div>
       <div className="flex flex-col">
         <Title
@@ -24,18 +23,12 @@ export default function Home() {
         />
         <WeekDays />
       </div>
-      <div className="flex flex-col gap-8 max-md:px-3.5 max-md:flex-col-reverse">
+      <div className="flex flex-col gap-8 max-md:px-3 max-md:flex-col-reverse">
         <div className="flex flex-col">
-          <div className="flex justify-between items-end">
-            <Title
-              icon={<GalleryVerticalEnd size={14} />}
-              label="Grupo de Tarefas"
-            />
-            <div className="gap-1 flex items-center cursor-pointer opacity-50 hover:opacity-100 transition-all duration-200 ease-in text-sm hover:underline mb-4">
-              <h2>ver todos</h2>
-              <CornerDownLeft size={14} />
-            </div>
-          </div>
+          <Title
+            icon={<GalleryVerticalEnd size={14} />}
+            label="Grupo de Tarefas"
+          />
           <TasksGroup />
         </div>
         <div className="flex flex-col flex-1 w-full">

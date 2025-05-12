@@ -1,7 +1,12 @@
+"use client";
+
 import { PlusSquare, Repeat, Squircle } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function TasksGroup() {
+  const router = useRouter();
+
   return (
     <div className="flex items-center justify-start gap-4">
       <div className="h-[144px] aspect-square rounded-2xl overflow-hidden hover:drop-shadow-lg cursor-pointer transition-all duration-200 ease-linear select-none bg-card flex flex-col">
@@ -29,7 +34,7 @@ export default function TasksGroup() {
           </div>
         </div>
       </div>
-      <div className="h-[144px] aspect-square rounded-2xl overflow-hidden hover:drop-shadow-lg cursor-pointer transition-all duration-200 ease-linear select-none bg-card flex flex-col">
+      <div onClick={() => router.push("/taskGroup")} className="h-[144px] aspect-square rounded-2xl overflow-hidden hover:drop-shadow-lg cursor-pointer transition-all duration-200 ease-linear select-none bg-card flex flex-col">
         <div className="flex w-full h-[44px] mb-4 relative">
           <div className="w-full h-full bg-[rgba(127,127,127,0.1)]"></div>
           <PlusSquare
